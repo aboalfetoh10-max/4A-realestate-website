@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>4A Real Estate | Alexandria Property Brokers</title>
+<title>4A Real Estate | Your Full Service Property Partner</title>
 <meta name="description" content="4A Real Estate, Alexandria: resale, sale and rent, furnished rentals and new launches with Egypt's leading developers. Founded by Abdalrahman Aboalfetoh.">
 <meta name="theme-color" content="#0a1d35">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/covers/2020.jpg">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="4A Real Estate">
-<meta property="og:title" content="4A Real Estate | Alexandria Property Brokers">
+<meta property="og:title" content="4A Real Estate | Your Full Service Property Partner">
 <meta property="og:description" content="Resale, rent, furnished rentals and new launches in Alexandria and the North Coast.">
 <meta property="og:image" content="og.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -350,26 +350,37 @@ tbody tr:last-child td{border-bottom:0}
 .tour-wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,340px);gap:28px;align-items:stretch;margin-bottom:64px}
 @media (max-width:900px){.tour-wrap{grid-template-columns:1fr}}
 .tour-panel{display:grid;gap:22px;align-content:start}
-.modes{display:flex;gap:6px;padding:5px;border:1px solid var(--line);border-radius:999px;width:max-content;max-width:100%}
-.modes button{border:0;background:transparent;padding:8px 16px;border-radius:999px;cursor:pointer;font-size:14px;transition:background .3s,color .3s}
-.modes button[aria-pressed="true"]{background:var(--fg);color:var(--bg)}
-.spot-info{border:1px solid var(--line);border-radius:18px;padding:22px;background:var(--surface);display:grid;gap:8px;min-height:160px}
-.spot-info h3{font-size:30px}
-.spot-info p{color:var(--muted);font-size:15px}
-.spot-info .meta{font-family:var(--f-serif);color:var(--accent);font-size:14px;letter-spacing:.08em}
-.villa-stage{position:relative;border-radius:24px;overflow:hidden;min-height:540px;background:radial-gradient(120% 100% at 50% 110%,var(--stage-a),var(--stage-b));transition:background 1s;touch-action:pan-y}
-.villa-stage.sunset{background:radial-gradient(120% 100% at 70% 110%,#f0b48a,#5b4a63 70%,#1d2236)}
-.villa-stage.night{background:radial-gradient(120% 100% at 50% 110%,#16304f,#050b16 70%)}
-.villa-stage canvas{display:block;width:100%!important;height:100%!important;position:absolute;inset:0;cursor:grab}
-.villa-stage canvas:active{cursor:grabbing}
-.spot{position:absolute;top:0;left:0;width:34px;height:34px;margin:-17px 0 0 -17px;border-radius:50%;border:1px solid rgba(255,255,255,.75);background:rgba(10,29,53,.4);backdrop-filter:blur(6px);color:#fff;cursor:pointer;display:grid;place-items:center;font-family:var(--f-display);font-size:16px;transition:background .3s,opacity .3s;z-index:2}
-.spot::before{content:"";position:absolute;inset:-6px;border-radius:50%;border:1px solid rgba(255,255,255,.35);animation:ring 2.4s infinite}
-@keyframes ring{0%{transform:scale(.8);opacity:1}100%{transform:scale(1.6);opacity:0}}
-.spot:hover,.spot[aria-pressed="true"]{background:#2f86d8;border-color:#2f86d8}
-.stage-ui{position:absolute;bottom:16px;inset-inline:16px;display:flex;justify-content:space-between;align-items:center;gap:12px;z-index:3;pointer-events:none;color:var(--fg);font-size:13px}
-.villa-stage.sunset .stage-ui,.villa-stage.night .stage-ui{color:#fff}
-.stage-ui .icon-btn{pointer-events:auto;color:inherit;background:color-mix(in srgb,var(--surface) 40%,transparent);backdrop-filter:blur(6px)}
-.compass{font-family:var(--f-serif);letter-spacing:.1em}
+.spot-info{border:1px solid var(--line);border-radius:18px;padding:26px;background:var(--surface);display:grid;gap:12px;min-height:160px;align-content:start}
+.spot-info h3{font-size:clamp(24px,2.3vw,30px);line-height:1.15}
+.spot-info p,.spot-info li{color:var(--muted);font-size:15px;line-height:1.65}
+.spot-info b{color:var(--fg);font-weight:600}
+.spot-info .hl{color:var(--accent)}
+.spot-info ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.spot-info li{display:flex;gap:12px;align-items:baseline}
+.spot-info li::before{content:"";flex:0 0 18px;height:1px;background:var(--accent);transform:translateY(-4px)}
+.spot-info .meta{font-family:var(--f-serif);color:var(--accent);font-size:14px;letter-spacing:.08em;text-transform:uppercase}
+.spot-info .meta .n{color:var(--fg);margin-right:8px}
+.reels-wrap{grid-template-columns:minmax(0,1fr) minmax(0,380px);align-items:center}
+.reel-stage{position:relative;border-radius:24px;overflow:hidden;height:clamp(520px,64vh,640px);background:radial-gradient(120% 100% at 50% 110%,var(--stage-a),var(--stage-b));perspective:1300px;touch-action:pan-y;outline:none}
+.reel-stage:focus-visible{box-shadow:0 0 0 2px var(--accent)}
+.reel-ring{position:absolute;inset:0 0 54px;transform-style:preserve-3d}
+.reel{--k:1;position:absolute;left:50%;top:50%;margin:0;width:var(--cw,260px);aspect-ratio:9/16;border-radius:18px;overflow:hidden;background:#0a1d35;cursor:pointer;
+  box-shadow:0 30px 60px -24px rgba(10,29,53,.55);will-change:transform;backface-visibility:hidden}
+.reel video{display:block;width:100%;height:100%;object-fit:cover}
+.reel-shade{position:absolute;inset:0;background:#0a1d35;opacity:calc((1 - var(--k)) * .55);pointer-events:none;transition:opacity .2s}
+.reel-tag{position:absolute;left:12px;top:12px;padding:6px 10px;border-radius:999px;background:rgba(10,29,53,.45);backdrop-filter:blur(8px);color:#fff;font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:calc(var(--k) * 1.4 - .4)}
+.reel.on{cursor:default}
+.reel-bars{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);display:flex;gap:8px;z-index:200}
+.reel-bars button{width:44px;height:14px;border:0;padding:5px 0;background:transparent;cursor:pointer}
+.reel-bars button::before{content:"";display:block;height:3px;border-radius:2px;background:color-mix(in srgb,var(--fg) 18%,transparent)}
+.reel-bars i{display:block;height:3px;margin-top:-3px;border-radius:2px;background:var(--accent);transform:scaleX(0);transform-origin:left}
+.reel-ui{position:absolute;inset-inline:16px;bottom:12px;display:flex;justify-content:space-between;z-index:201;pointer-events:none}
+.reel-ui .icon-btn{pointer-events:auto;color:var(--fg);background:color-mix(in srgb,var(--surface) 55%,transparent);backdrop-filter:blur(6px)}
+#reelSound{position:absolute;right:52px;bottom:0}
+#reelSound .s-on,#reelSound.on .s-off{display:none}
+#reelSound.on .s-on{display:block}
+@media (max-width:900px){.reels-wrap{grid-template-columns:1fr}.reel-stage{height:min(600px,118vw)}}
+@media (max-width:520px){.reel-bars button{width:30px}#reelSound{right:48px}.reel-tag{font-size:9px;padding:5px 8px;left:8px;top:8px}.reel{border-radius:14px}}
 
 /* contact */
 .contact{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:56px}
@@ -490,7 +501,7 @@ footer .brand svg{width:34px;height:32px}
         <p class="lead">Where timeless elegance meets exceptional living. We find spaces that reflect your aspirations and turn every address into a statement.</p>
         <div class="ctas">
           <a class="btn btn-primary magnetic" href="#resale">Browse resale units <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
-          <a class="btn btn-ghost magnetic" href="#featured">Take the 3D tour</a>
+          <a class="btn btn-ghost magnetic" href="#reels">Watch the reels</a>
         </div>
         <div class="marks" aria-label="Logo versions">
           <div class="m"><svg class="logo-svg"><use href="#logo"/></svg></div>
@@ -516,7 +527,7 @@ footer .brand svg{width:34px;height:32px}
     <div class="wrap">
       <span class="level"><b>+04.20</b> About 4A</span>
       <div class="about" style="margin-top:28px">
-        <p class="big">An Alexandria brokerage that would rather show you <em>three right homes</em> than thirty wrong ones.</p>
+        <p class="big">Your <em>trusted real estate partner</em>, offering full-service solutions from finding the right property to closing the deal.</p>
         <div class="txt">
           <p>4A Real Estate is a full service property partner. We help clients buy, sell, rent and invest across Alexandria, the North Coast and Cairo, and we stay with each client from the first viewing to the handover of keys.</p>
           <p>Every unit we recommend is visited by our team, its contract reviewed, and its price checked against recent sales in the same project. We work directly with the developers behind those projects, so our clients hear about new phases first.</p>
@@ -658,26 +669,20 @@ footer .brand svg{width:34px;height:32px}
         <p>Waterfront villas in Mazarine, New Alamein, and a standalone villa in Muruj, chosen for location and finish.</p>
       </div></div>
       <div class="grid featgrid" id="grid"></div>
-      <div class="sub-head"><div style="display:grid;gap:14px"><span class="level">Interactive model</span><h3>Walk around a villa <b>in 3D</b></h3></div></div>
-      <div class="tour-wrap">
-        <div class="villa-stage" id="villaStage" data-cursor="Drag">
-          <div class="stage-ui">
-            <span class="compass" id="compass">N 0°</span>
-            <button class="icon-btn" type="button" id="resetView" aria-label="Reset view"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12a8 8 0 1 0 2.4-5.7M4 4v4h4"/></svg></button>
+      <div class="sub-head" id="reels"><div style="display:grid;gap:14px"><span class="level">Property reels</span><h3>Watch the <b>reels</b></h3></div></div>
+      <div class="tour-wrap reels-wrap">
+        <div class="reel-stage" id="reelStage" tabindex="0" aria-roledescription="carousel" aria-label="Property reels" data-cursor="Watch">
+          <div class="reel-ring" id="reelRing"></div>
+          <div class="reel-bars" id="reelBars"></div>
+          <div class="reel-ui">
+            <button class="icon-btn" type="button" id="reelPrev" aria-label="Previous reel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 5l-7 7 7 7"/></svg></button>
+            <button class="icon-btn" type="button" id="reelSound" aria-pressed="false" aria-label="Turn sound on"><svg class="s-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 9h4l5-4v14l-5-4H4zM17 9l4 6M21 9l-4 6"/></svg><svg class="s-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 9h4l5-4v14l-5-4H4zM17 8.5a5 5 0 0 1 0 7M19.5 6a8.5 8.5 0 0 1 0 12"/></svg></button>
+            <button class="icon-btn" type="button" id="reelNext" aria-label="Next reel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 5l7 7-7 7"/></svg></button>
           </div>
         </div>
         <div class="tour-panel">
-          <div class="modes" role="group" aria-label="Lighting">
-            <button type="button" data-mode="day" aria-pressed="true">Day</button>
-            <button type="button" data-mode="sunset" aria-pressed="false">Sunset</button>
-            <button type="button" data-mode="night" aria-pressed="false">Night</button>
-          </div>
-          <div class="spot-info" id="spotInfo" aria-live="polite">
-            <span class="meta">INTERACTIVE MODEL</span>
-            <h3>Explore the spaces</h3>
-            <p>Drag to turn the villa, tap a marker to read about that space, and switch the light between day, sunset and night.</p>
-          </div>
-          <a class="btn btn-ghost" href="#contact" style="justify-self:start" id="tourBook">Ask about villas</a>
+          <div class="spot-info reel-info" id="reelInfo" aria-live="polite"></div>
+          <a class="btn btn-ghost" href="#contact" style="justify-self:start" id="tourBook">Ask about this property</a>
         </div>
       </div>
       </div>
@@ -753,7 +758,6 @@ footer .brand svg{width:34px;height:32px}
 
 <script src="assets/units-data.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/RGBELoader.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script>
@@ -1016,7 +1020,6 @@ document.addEventListener('keydown', e => {
   if (cur && e.key === 'ArrowLeft') showPhoto(gi - 1);
 });
 (function(){ let sx = null; const g = $('.gal'); g.addEventListener('touchstart', e => sx = e.touches[0].clientX, { passive: true }); g.addEventListener('touchend', e => { if (sx == null || !cur) return; const dx = e.changedTouches[0].clientX - sx; if (Math.abs(dx) > 40) showPhoto(gi + (dx < 0 ? 1 : -1)); sx = null; }); })();
-$('#tourBook').addEventListener('click', () => { $('#fType').value = 'Resale'; $('#fMsg').value = 'Interested in villas (Mazarine / Muruj)'; });
 
 /* ---------- contact ---------- */
 $('#copyPhone').addEventListener('click', e => {
@@ -1323,468 +1326,129 @@ const clock = new THREE.Clock();
 })();
 
 
-/* ---------- villa explorer: a modern coastal villa built with real PBR materials and HDRI light ---------- */
-// Textures and skies: Poly Haven (CC0). Units are metres; the whole model is scaled into the stage.
-const vStage = $('#villaStage');
-const V = { r: makeRenderer(), scene: new THREE.Scene(), cam: new THREE.PerspectiveCamera(34, 1, 1.2, 460) };
-V.r.physicallyCorrectLights = true;
-V.scene.environment = env;
-V.r.shadowMap.type = THREE.PCFSoftShadowMap;
-V.r.shadowMap.autoUpdate = false;
-let shadowDirty = 240;                // frames the shadow map keeps refreshing (after loads and light changes)
-V.cam.layers.enable(1);               // layer 1: sky, glass and leaf cards (drawn, but kept out of the depth pass)
-vStage.prepend(V.r.domElement);
-const VS = .42;                       // metres → stage units
-const villa = new THREE.Group(); villa.scale.setScalar(VS); V.scene.add(villa);
-const vSun = new THREE.DirectionalLight(0xfff4e5, 2.6); vSun.position.set(-7, 14, 12.4); vSun.castShadow = true;
-vSun.shadow.mapSize.set(4096, 4096); Object.assign(vSun.shadow.camera, { left: -8.5, right: 8.5, top: 8.5, bottom: -8.5, near: 1, far: 60 });
-vSun.shadow.bias = -.0003; vSun.shadow.normalBias = .018; vSun.shadow.radius = 2.5;
-V.scene.add(vSun);
-const vFill = new THREE.HemisphereLight(0xdfeaf5, 0x6a6a52, .25); V.scene.add(vFill);
-V.scene.fog = new THREE.Fog(0xb9c6d6, 45, 172);
-let vDist = 15;
-const AOS = { strength: 1, w: 4, h: 4 };
-function sizeVilla(){
-  const w = vStage.clientWidth, h = vStage.clientHeight; if (!w || !h) return;
-  V.r.setSize(w, h, false); V.cam.aspect = w / h; V.cam.updateProjectionMatrix(); vDist = w / h < 1 ? 23 : 15;
-  const s = V.r.getDrawingBufferSize(new THREE.Vector2()); AOS.w = Math.max(4, s.x >> 1); AOS.h = Math.max(4, s.y >> 1);
-  if (typeof AO !== 'undefined' && AO) AO.resize();
-}
-
-/* materials */
-const VLM = new THREE.LoadingManager(); VLM.onLoad = () => { shadowDirty = 240; };
-const VT = new THREE.TextureLoader(VLM), aniso = Math.min(8, V.r.capabilities.getMaxAnisotropy());
-function vtex(n, srgb){ const t = VT.load(`assets/villa/${n}.jpg`); t.wrapS = t.wrapT = THREE.RepeatWrapping; t.anisotropy = aniso; if (srgb) t.encoding = THREE.sRGBEncoding; return t; }
-const texCache = {}; const vt = (n, srgb) => texCache[n] || (texCache[n] = vtex(n, srgb));
-function pbr(n, tile, o = {}){
-  const m = new THREE.MeshStandardMaterial({ map: vt(n + '_diff', true), roughnessMap: vt(n + '_rough'), normalMap: vt(n + '_nor'), ...o });
-  m.userData.tile = tile; return m;
-}
-function canvasTex(w, h, draw, srgb = true){ const c = document.createElement('canvas'); c.width = w; c.height = h; draw(c.getContext('2d'), w, h); const t = new THREE.CanvasTexture(c); t.wrapS = t.wrapT = THREE.RepeatWrapping; t.anisotropy = aniso; if (srgb) t.encoding = THREE.sRGBEncoding; return t; }
-const mosaic = canvasTex(512, 512, (x, w) => { const n = 32, s = w / n; x.fillStyle = '#dcebec'; x.fillRect(0, 0, w, w); for (let i = 0; i < n; i++) for (let j = 0; j < n; j++){ x.fillStyle = `hsl(${186 + Math.random() * 10},${48 + Math.random() * 18}%,${54 + Math.random() * 14}%)`; x.fillRect(i * s + .8, j * s + .8, s - 1.6, s - 1.6); } });
-const ripple = canvasTex(256, 256, (x, w) => { const d = x.createImageData(w, w); for (let j = 0; j < w; j++) for (let i = 0; i < w; i++){ const a = i / w * Math.PI * 2, b = j / w * Math.PI * 2; const dx = Math.cos(a * 3 + b) * .5 + Math.cos(a * 7 - b * 2) * .3 + Math.cos(a * 2 + b * 5) * .2 + Math.cos(a * 13 + b * 9) * .15, dy = Math.cos(b * 4 + a) * .5 + Math.cos(b * 6 - a * 3) * .3 + Math.cos(b * 2 + a * 5) * .2 + Math.cos(b * 11 - a * 8) * .15; const k = (j * w + i) * 4; d.data[k] = 128 + dx * 60; d.data[k + 1] = 128 + dy * 60; d.data[k + 2] = 255; d.data[k + 3] = 255; } x.putImageData(d, 0, 0); }, false);
-const seaRipple = ripple.clone(); seaRipple.needsUpdate = true;
-const folds = canvasTex(256, 8, (x, w, h) => { for (let i = 0; i < w; i++){ const s = Math.sin(i / w * Math.PI * 2 * 14) + Math.sin(i / w * Math.PI * 2 * 5) * .4; x.fillStyle = `rgb(${128 + s * 70 | 0},128,255)`; x.fillRect(i, 0, 1, h); } }, false);
-const VMat = {
-  plaster: pbr('plaster', 2.4, { map: null, color: 0xefece6, roughness: .95, envMapIntensity: 1.1 }),
-  wood: pbr('wood', 1.6, { color: 0xb98a62, roughness: .85 }),
-  woodDark: new THREE.MeshStandardMaterial({ color: 0x241a13, roughness: .9 }),
-  deck: pbr('deck', 1.8, { color: 0xd7b996, roughness: .9 }),
-  stone: pbr('stone', 2.4, { color: 0xf3ead9, roughness: .85 }),
-  coping: pbr('stone', 1.2, { color: 0xfbf7ef, roughness: .6 }),
-  grass: pbr('grass', 2.6, { color: 0x7c9e58, roughness: 1 }),
-  sand: new THREE.MeshStandardMaterial({ color: 0xa48f6a, roughness: 1, normalMap: vt('plaster_nor'), normalScale: new THREE.Vector2(.6, .6), envMapIntensity: .8 }),
-  sea: new THREE.MeshStandardMaterial({ color: 0x0f4a5e, roughness: .14, metalness: .05, normalMap: seaRipple, normalScale: new THREE.Vector2(.55, .55), envMapIntensity: 1.5 }),
-  soil: new THREE.MeshStandardMaterial({ color: 0x3a2e24, roughness: 1 }),
-  frame: new THREE.MeshStandardMaterial({ color: 0x2b2826, metalness: .7, roughness: .38 }),
-  glass: new THREE.MeshPhysicalMaterial({ color: 0x9fb9c4, metalness: .25, roughness: .02, transparent: true, opacity: .34, envMapIntensity: 3, depthWrite: false, side: THREE.DoubleSide }),
-  rail: new THREE.MeshPhysicalMaterial({ color: 0xd8ebef, metalness: .1, roughness: .02, transparent: true, opacity: .2, envMapIntensity: 2.4, depthWrite: false, side: THREE.DoubleSide }),
-  curtain: new THREE.MeshStandardMaterial({ color: 0xf6f1e8, roughness: 1, transparent: true, opacity: .8, side: THREE.DoubleSide, normalMap: folds, normalScale: new THREE.Vector2(.9, .9), depthWrite: false, emissive: 0xffd9ae, emissiveIntensity: 0 }),
-  water: new THREE.MeshStandardMaterial({ color: 0x4fb6cf, metalness: .05, roughness: .03, transparent: true, opacity: .62, normalMap: ripple, normalScale: new THREE.Vector2(.32, .32), envMapIntensity: 2 }),
-  liner: new THREE.MeshStandardMaterial({ map: mosaic, roughness: .3, side: THREE.BackSide, emissive: 0x3cc8e8, emissiveIntensity: 0 }),
-  inWall: new THREE.MeshStandardMaterial({ color: 0xe9dfd1, roughness: .9, emissive: 0xffc68c, emissiveIntensity: 0 }),
-  inFloor: pbr('stone', 1.4, { color: 0xe7ddd0, roughness: .4 }),
-  fabric: new THREE.MeshStandardMaterial({ color: 0xe6e0d4, roughness: 1 }),
-  fabricDark: new THREE.MeshStandardMaterial({ color: 0x45403b, roughness: 1 }),
-  cushion: new THREE.MeshStandardMaterial({ color: 0xf7f5f0, roughness: .95 }),
-  steel: new THREE.MeshStandardMaterial({ color: 0xb4b1ab, metalness: 1, roughness: .25 }),
-  lamp: new THREE.MeshStandardMaterial({ color: 0xffffff, emissive: 0xffd9a8, emissiveIntensity: .15, roughness: .5 }),
-  led: new THREE.MeshStandardMaterial({ color: 0xffffff, emissive: 0xffcf96, emissiveIntensity: 0, roughness: .5 }),
-  core: new THREE.MeshStandardMaterial({ color: 0x141f0d, roughness: 1, envMapIntensity: .3 })
-};
-VMat.sand.userData.tile = 1.5; VMat.sand.normalMap = vt('plaster_nor');
-VMat.water.normalMap.repeat.set(4, 1.6); seaRipple.repeat.set(150, 70);
-
-/* geometry helpers: boxes by bounds, with UVs in metres so every surface tiles at real scale */
-function BX(x0, x1, y0, y1, z0, z1, m, parent = villa, cast = true, recv = true){
-  const w = x1 - x0, h = y1 - y0, d = z1 - z0, g = new THREE.BoxGeometry(w, h, d), t = m.userData.tile;
-  if (t){ const uv = g.attributes.uv, dims = [[d,h],[d,h],[w,d],[w,d],[w,h],[w,h]];
-    for (let f = 0; f < 6; f++) for (let k = 0; k < 4; k++){ const i = f * 4 + k; uv.setXY(i, uv.getX(i) * dims[f][0] / t, uv.getY(i) * dims[f][1] / t); } }
-  const o = new THREE.Mesh(g, m); o.position.set((x0 + x1) / 2, (y0 + y1) / 2, (z0 + z1) / 2); o.castShadow = cast; o.receiveShadow = recv; parent.add(o); return o;
-}
-const noDepth = o => { o.layers.set(1); return o; };
-const P0 = .45;                              // podium top
-const rnd = (a = 1, b) => b === undefined ? Math.random() * a : a + Math.random() * (b - a);
-
-/* planting helpers: shrubs and hedges are clouds of alpha-tested leaf cards around a dark core */
-const leafTex = canvasTex(256, 256, (x, w) => {
-  x.clearRect(0, 0, w, w);
-  for (let i = 0; i < 90; i++){
-    const L = rnd(13, 24); x.save(); x.translate(rnd(26, w - 26), rnd(26, w - 26)); x.rotate(rnd(6.28));
-    x.fillStyle = `hsl(${rnd(82, 118)},${rnd(38, 60)}%,${rnd(15, 34)}%)`; x.beginPath(); x.moveTo(-L, 0); x.quadraticCurveTo(0, -L * .55, L, 0); x.quadraticCurveTo(0, L * .55, -L, 0); x.fill();
-    x.strokeStyle = 'rgba(205,220,150,.35)'; x.lineWidth = 1; x.beginPath(); x.moveTo(-L, 0); x.lineTo(L, 0); x.stroke(); x.restore();
-  }
-});
-const softNormals = s => { s.fragmentShader = s.fragmentShader.replace('gl_FrontFacing ? 1.0 : - 1.0', '1.0'); };
-const leafM = new THREE.MeshStandardMaterial({ map: leafTex, color: 0x8a987a, alphaTest: .38, side: THREE.DoubleSide, vertexColors: true, roughness: 1, envMapIntensity: .32 });
-leafM.onBeforeCompile = softNormals;
-const leafDepth = new THREE.MeshDepthMaterial({ depthPacking: THREE.RGBADepthPacking, map: leafTex, alphaTest: .38 });
-const _q = new THREE.Quaternion(), _q2 = new THREE.Quaternion(), _v = new THREE.Vector3(), _z = new THREE.Vector3(0, 0, 1);
-function leafCards(sample, n, size, tint = [1, 1, 1]){
-  const pos = [], nor = [], uv = [], col = [], idx = [], p = new THREE.Vector3(), nn = new THREE.Vector3();
-  for (let i = 0; i < n; i++){
-    const shade = sample(p, nn), s = size * rnd(.7, 1.3), k = pos.length / 3;
-    _v.set(nn.x + rnd(-.7, .7), nn.y + rnd(-.7, .7), nn.z + rnd(-.7, .7)).normalize();
-    _q.setFromUnitVectors(_z, _v).multiply(_q2.setFromAxisAngle(_z, rnd(6.28)));
-    const nx = nn.x, ny = nn.y * .6 + .55, nz = nn.z, nl = Math.hypot(nx, ny, nz), b = shade * rnd(.7, 1.15);
-    [[-1, -1], [1, -1], [1, 1], [-1, 1]].forEach(([a, c]) => { _v.set(a * s / 2, c * s / 2, 0).applyQuaternion(_q).add(p); pos.push(_v.x, _v.y, _v.z); nor.push(nx / nl, ny / nl, nz / nl); uv.push(a * .5 + .5, c * .5 + .5); col.push(tint[0] * b, tint[1] * b, tint[2] * b); });
-    idx.push(k, k + 1, k + 2, k, k + 2, k + 3);
-  }
-  const g = new THREE.BufferGeometry(); g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3)); g.setAttribute('normal', new THREE.Float32BufferAttribute(nor, 3)); g.setAttribute('uv', new THREE.Float32BufferAttribute(uv, 2)); g.setAttribute('color', new THREE.Float32BufferAttribute(col, 3)); g.setIndex(idx);
-  const m = new THREE.Mesh(g, leafM); m.customDepthMaterial = leafDepth; m.castShadow = m.receiveShadow = true; return noDepth(m);
-}
-function shrub(r, squash = .8, tint){
-  const g = new THREE.Group(), ry = r * squash;
-  const core = new THREE.Mesh(new THREE.SphereGeometry(r * .72, 12, 8), VMat.core); core.scale.y = squash; core.castShadow = true; g.add(core);
-  g.add(leafCards((p, n) => { const a = rnd(6.28), y = rnd(-.25, 1), q = Math.sqrt(1 - y * y), k = rnd(.78, 1.02); n.set(Math.cos(a) * q, y, Math.sin(a) * q); p.set(n.x * r * k, n.y * ry * k, n.z * r * k); return .55 + .45 * (y * .5 + .5); }, Math.round(70 * r * r + 30), .5 * Math.sqrt(r) + .12, tint));
-  return g;
-}
-function hedge(x0, x1, y1, z0, z1, tint){
-  const w = x1 - x0, d = z1 - z0, g = new THREE.Group(), aT = w * d, aX = y1 * d, aZ = y1 * w, tot = aT + 2 * aX + 2 * aZ;
-  BX(x0 + .12, x1 - .12, 0, y1 - .12, z0 + .12, z1 - .12, VMat.core, g);
-  g.add(leafCards((p, n) => { let r = rnd(tot);
-    if ((r -= aT) < 0){ p.set(rnd(x0, x1), y1 + rnd(-.05, .06), rnd(z0, z1)); n.set(0, 1, 0); return 1; }
-    const y = rnd(.05, y1), sh = .5 + .5 * y / y1;
-    if ((r -= aX) < 0){ p.set(x0, y, rnd(z0, z1)); n.set(-1, 0, 0); return sh; }
-    if ((r -= aX) < 0){ p.set(x1, y, rnd(z0, z1)); n.set(1, 0, 0); return sh; }
-    if ((r -= aZ) < 0){ p.set(rnd(x0, x1), y, z0); n.set(0, 0, -1); return sh; }
-    p.set(rnd(x0, x1), y, z1); n.set(0, 0, 1); return sh; }, Math.round(tot * 16), .34, tint));
-  villa.add(g); return g;
-}
-
-/* site: walled plot with lawn, travertine terrace and pool, on a beach that runs out to the sea */
-(function site(){
-  const disc = (r, m, y, seg = 72) => { const g = new THREE.CircleGeometry(r, seg), uv = g.attributes.uv, t = m.userData.tile || 1; for (let i = 0; i < uv.count; i++) uv.setXY(i, (uv.getX(i) - .5) * 2 * r / t, (uv.getY(i) - .5) * 2 * r / t); const o = new THREE.Mesh(g, m); o.rotation.x = -Math.PI / 2; o.position.y = y; o.receiveShadow = true; villa.add(o); return o; };
-  disc(400, VMat.sand, -.08);
-  const sea = new THREE.Mesh(new THREE.PlaneGeometry(820, 380), VMat.sea); sea.rotation.x = -Math.PI / 2; sea.position.set(0, -.04, 31 + 190); villa.add(sea);
-  const foam = new THREE.Mesh(new THREE.PlaneGeometry(820, 1.6), new THREE.MeshStandardMaterial({ color: 0xffffff, roughness: .6, transparent: true, opacity: .55, depthWrite: false })); foam.rotation.x = -Math.PI / 2; foam.position.set(0, -.03, 31.6); villa.add(noDepth(foam));
-  // lawn, with the pool cut out
-  const sh = new THREE.Shape(); sh.moveTo(-14, -13.5); sh.lineTo(14, -13.5); sh.lineTo(14, 11); sh.lineTo(-14, 11); sh.closePath();
-  const hole = new THREE.Path(); hole.moveTo(-1, -4); hole.lineTo(8, -4); hole.lineTo(8, -7.6); hole.lineTo(-1, -7.6); hole.closePath(); sh.holes.push(hole);
-  const g = new THREE.ShapeGeometry(sh), uv = g.attributes.uv; for (let i = 0; i < uv.count; i++) uv.setXY(i, uv.getX(i) / 2.6, uv.getY(i) / 2.6);
-  g.rotateX(-Math.PI / 2);
-  const lawn = new THREE.Mesh(g, VMat.grass); lawn.receiveShadow = true; villa.add(lawn);
-  // boundary: rendered walls with stone copings at the back and sides, low kerb to the beach
-  const wall = (x0, x1, z0, z1, h) => { BX(x0, x1, -.1, h, z0, z1, VMat.plaster); BX(x0 - .04, x1 + .04, h, h + .07, z0 - .04, z1 + .04, VMat.coping); };
-  wall(-14.25, 14.25, -11.25, -11, 2.1); wall(-14.25, -14, -11, 9, 2.1); wall(14, 14.25, -11, 9, 2.1);
-  wall(-14.25, -14, 9, 13.5, 1.1); wall(14, 14.25, 9, 13.5, 1.1);
-  BX(-14.25, 14.25, -.1, .18, 13.5, 13.75, VMat.coping);
-  // podium + terrace around the pool
-  BX(-9, 9, 0, P0, -7, 2.5, VMat.stone);
-  BX(-9, 9, 0, P0, 2.5, 4, VMat.stone); BX(-9, 9, 0, P0, 7.6, 9, VMat.stone);
-  BX(-9, -1, 0, P0, 4, 7.6, VMat.stone); BX(8, 9, 0, P0, 4, 7.6, VMat.stone);
-  BX(-8.6, -1.6, P0, P0 + .04, 4.3, 7.3, VMat.deck);                                   // timber deck
-  [[-1.15, -.85, 3.85, 7.75], [7.85, 8.15, 3.85, 7.75], [-1.15, 8.15, 3.85, 4.15], [-1.15, 8.15, 7.45, 7.75]].forEach(([a, b, c, d]) => BX(a, b, P0, P0 + .05, c, d, VMat.coping));
-  for (let i = 0; i < 3; i++) BX(-6, -3, 0, P0 - i * .15, 9 + i * .4, 9.4 + i * .4, VMat.stone); // steps to the lawn
-  for (let i = 0; i < 6; i++) BX(-5.3, -3.7, 0, .03, 10.6 + i * .95, 11.2 + i * .95, VMat.coping, villa, false);   // stepping stones to the beach
-  // pool
-  const liner = new THREE.Mesh(new THREE.BoxGeometry(9, 1.6, 3.6), VMat.liner); liner.position.set(3.5, P0 - .8, 5.8); villa.add(noDepth(liner));
-  VMat.liner.map.repeat.set(5, 1.6);
-  const water = new THREE.Mesh(new THREE.PlaneGeometry(9, 3.6), VMat.water); water.rotation.x = -Math.PI / 2; water.position.set(3.5, P0 - .1, 5.8); water.receiveShadow = true; villa.add(noDepth(water));
-  // pool ladder
-  [-.25, .25].forEach(dz => { const t = new THREE.Mesh(new THREE.TorusGeometry(.32, .022, 8, 20, Math.PI), VMat.steel); t.position.set(7.86, P0 + .42, 5.8 + dz); t.castShadow = true; villa.add(t);
-    BX(7.52, 7.56, P0 - .5, P0 + .42, 5.78 + dz, 5.82 + dz, VMat.steel); BX(8.16, 8.2, P0, P0 + .42, 5.78 + dz, 5.82 + dz, VMat.steel); });
-  // garden bollard lights
-  [[-6.6, 9.9], [-2.4, 9.9], [-6, 13], [-3, 13], [9.6, 9.6], [9.6, 1]].forEach(([x, z]) => { BX(x - .05, x + .05, 0, .55, z - .05, z + .05, VMat.frame); BX(x - .052, x + .052, .43, .52, z - .052, z + .052, VMat.led, villa, false, false); });
-})();
-
-/* house */
-const glowLights = [];
-(function house(){
-  const G1 = P0, G2 = 3.85, F1 = 4.2, F2 = 7.4;
-  // ground floor shell
-  BX(-7, 4.5, G1, G2, -5, -4.7, VMat.inWall);                    // back wall (warm, lit at night)
-  BX(-7, 4.5, G1, G2, -5.3, -5, VMat.plaster);                   // rendered outer skin
-  BX(4.2, 4.5, G1, G2, -5, 1.8, VMat.plaster);                   // right wall
-  // tall timber blade wall: dark core clad in vertical oak battens
-  BX(-7.66, -7.04, 0, 8, -5.56, 2.76, VMat.woodDark);
-  for (let z = -5.6; z < 2.74; z += .14) BX(-7.7, -7, 0, 8, z, z + .105, VMat.wood);
-  for (let x = -7.7; x < -7.04; x += .14) BX(x, x + .105, 0, 8, -5.6, 2.8, VMat.wood);
-  BX(-7.74, -6.96, 8, 8.06, -5.64, 2.84, VMat.frame);
-  BX(-7, 4.5, G1, G1 + .02, -5, 1.8, VMat.inFloor, villa, false, true);
-  // front curtain wall: 5 sliding panes with slim bronze frames
-  noDepth(BX(-7, 4.2, G1 + .05, G2 - .05, 1.78, 1.82, VMat.glass, villa, false, false));
-  for (let i = 0; i <= 5; i++){ const x = -7 + i * (11.2 / 5); BX(x - .04, x + .04, G1, G2, 1.72, 1.88, VMat.frame); }
-  BX(-7, 4.2, G2 - .1, G2, 1.72, 1.88, VMat.frame); BX(-7, 4.2, G1, G1 + .06, 1.72, 1.88, VMat.frame);
-  // sheer curtains gathered at the ends of the glazing
-  const curtain = (x0, x1, y0, y1, z) => { const c = new THREE.Mesh(new THREE.PlaneGeometry(x1 - x0, y1 - y0, 1, 1), VMat.curtain); c.geometry.attributes.uv.array.forEach((v, i, a) => { if (i % 2 === 0) a[i] = v * (x1 - x0) / 2.4; }); c.position.set((x0 + x1) / 2, (y0 + y1) / 2, z); villa.add(noDepth(c)); };
-  curtain(-6.95, -5.5, G1 + .03, G2 - .12, 1.55); curtain(2.6, 4.15, G1 + .03, G2 - .12, 1.55);
-  // first-floor slab, cantilevered over the terrace, with a shadow gap, LED strip and downlights
-  BX(-7.7, 6.4, G2, F1, -5.6, 3.3, VMat.plaster);
-  BX(-7.72, 6.42, F1, F1 + .05, -5.62, 3.32, VMat.coping);
-  BX(-7, 6.4, G2 - .03, G2, 3.22, 3.26, VMat.led, villa, false, false);
-  for (let i = 0; i < 6; i++){ const d = new THREE.Mesh(new THREE.CircleGeometry(.09, 16), VMat.led); d.rotation.x = Math.PI / 2; d.position.set(-6 + i * 2, G2 - .005, 2.55); villa.add(d); }
-  BX(5.9, 6.3, G1, G2, 2.7, 3.1, VMat.plaster);                  // slim column under the cantilever
-  // first floor volume: master suite
-  BX(-2.5, 6.2, F1, F2, -5.5, -5.2, VMat.inWall);
-  BX(-2.5, 6.2, F1, F2, -5.75, -5.5, VMat.plaster);
-  BX(5.9, 6.2, F1, F2, -5.5, 1.6, VMat.plaster);
-  BX(-2.5, -2.2, F1, F2, -5.5, -2.2, VMat.plaster);
-  noDepth(BX(-2.5, 5.9, F1 + .05, F2 - .05, 1.58, 1.62, VMat.glass, villa, false, false));       // ribbon glazing
-  noDepth(BX(-2.38, -2.34, F1 + .05, F2 - .05, -2.2, 1.6, VMat.glass, villa, false, false));    // side slider to the terrace
-  BX(-2.5, 5.9, F1, F1 + .08, 1.52, 1.68, VMat.frame); BX(-2.5, 5.9, F2 - .1, F2, 1.52, 1.68, VMat.frame);
-  for (let i = 0; i <= 3; i++){ const x = -2.5 + i * (8.4 / 3); BX(x - .04, x + .04, F1, F2, 1.52, 1.68, VMat.frame); }
-  BX(-2.42, -2.3, F1, F2, -2.2, -2.1, VMat.frame); BX(-2.42, -2.3, F2 - .1, F2, -2.2, 1.6, VMat.frame);
-  curtain(-2.3, -.9, F1 + .1, F2 - .12, 1.38); curtain(.2, 1.3, F1 + .1, F2 - .12, 1.38);
-  for (let x = 1.6; x <= 5.8; x += .3) BX(x - .035, x + .035, F1 + .1, F2 - .1, 1.85, 2.07, VMat.wood);   // timber louvres
-  BX(1.4, 6.2, F2 - .14, F2 - .02, 1.75, 2.1, VMat.wood); BX(1.4, 6.2, F1 + .05, F1 + .14, 1.75, 2.1, VMat.wood);
-  BX(-2.5, 6.2, F1, F1 + .02, -5.5, 1.6, VMat.inFloor, villa, false, true);
-  // roof with deep overhang and a thin metal fascia
-  BX(-3, 6.8, F2, F2 + .32, -6, 2.6, VMat.plaster);
-  BX(-3.03, 6.83, F2 + .32, F2 + .37, -6.03, 2.63, VMat.frame);
-  BX(-3, 6.8, F2 - .03, F2, 2.5, 2.54, VMat.led, villa, false, false);
-  // terrace balustrade
-  noDepth(BX(-7, -2.5, F1 + .05, F1 + 1.15, 3.18, 3.2, VMat.rail, villa, false, false));
-  BX(-7, -2.5, F1 + 1.13, F1 + 1.17, 3.16, 3.22, VMat.steel);
-  for (let x = -6.9; x < -2.5; x += 1.45) BX(x - .02, x + .02, F1 + .05, F1 + .2, 3.15, 3.23, VMat.steel);
-  // terrace furniture
-  BX(-6.2, -4.4, F1 + .05, F1 + .4, -.6, .3, VMat.fabric); BX(-6.2, -4.4, F1 + .4, F1 + .8, -.6, -.35, VMat.fabric);
-  BX(-5.7, -4.9, F1 + .05, F1 + .35, 1, 1.6, VMat.wood);
-  // interior: living, dining, art, pendants
-  const I = villa;
-  BX(-6.4, -3, G1, G1 + .01, -3.6, .6, VMat.fabricDark, I, false, true);                // rug
-  BX(-6.2, -3.4, G1, G1 + .42, -3.2, -2.3, VMat.fabric); BX(-6.2, -3.4, G1 + .42, G1 + .85, -3.2, -2.95, VMat.fabric);   // sofa
-  BX(-6.2, -5.3, G1, G1 + .42, -2.3, .2, VMat.fabric);                                 // chaise
-  BX(-5, -3.8, G1, G1 + .35, -1.6, -.6, VMat.wood);                                    // coffee table
-  BX(-1.5, 2.3, G1 + .72, G1 + .78, -2.6, -1.4, VMat.wood);                            // dining table
-  [[-1.3, -2.45], [2.1, -2.45], [-1.3, -1.55], [2.1, -1.55]].forEach(([x, z]) => BX(x - .04, x + .04, G1, G1 + .72, z - .04, z + .04, VMat.frame));
-  for (let i = 0; i < 4; i++){ const x = -1 + i * 1.05; BX(x - .22, x + .22, G1, G1 + .46, -3.25, -2.8, VMat.fabricDark); BX(x - .22, x + .22, G1, G1 + .46, -1.2, -.75, VMat.fabricDark); }
-  BX(-6.6, -3.2, G1 + 1, G1 + 2.6, -4.7, -4.66, VMat.wood);                             // feature panel
-  const art = canvasTex(256, 160, (x, w, h) => { const g = x.createLinearGradient(0, 0, w, h); g.addColorStop(0, '#d9c3a5'); g.addColorStop(.5, '#7d93a6'); g.addColorStop(1, '#1f3550'); x.fillStyle = g; x.fillRect(0, 0, w, h); x.fillStyle = 'rgba(255,255,255,.55)'; x.beginPath(); x.arc(w * .68, h * .42, h * .22, 0, 7); x.fill(); });
-  const artM = new THREE.Mesh(new THREE.PlaneGeometry(2.2, 1.35), new THREE.MeshStandardMaterial({ map: art, roughness: .8 })); artM.position.set(.4, G1 + 1.9, -4.68); I.add(artM);
-  [-.8, .4, 1.6].forEach(x => { const p = new THREE.Mesh(new THREE.CylinderGeometry(.22, .3, .28, 24), VMat.lamp); p.position.set(x, G1 + 2.3, -2); I.add(p); BX(x - .006, x + .006, G1 + 2.44, G2, -2.006, -1.994, VMat.frame); });
-  BX(-.6, 3.6, F1, F1 + .55, -5.1, -3.2, VMat.fabric); BX(-.6, 3.6, F1 + .55, F1 + 1.3, -5.2, -5.05, VMat.wood);   // bed
-  // planters
-  [[-6.3, 2.6], [3.6, 2.6]].forEach(([x, z]) => { BX(x - .38, x + .38, G1, G1 + .62, z - .38, z + .38, VMat.frame); BX(x - .34, x + .34, G1 + .6, G1 + .63, z - .34, z + .34, VMat.soil); const b = shrub(.55, 1.05, [.95, 1.05, .85]); b.position.set(x, G1 + 1.05, z); villa.add(b); });
-  // warm interior light for sunset and night
-  [[-4.5, 2.6, -1.5, 9], [1, 2.6, -2, 9], [2, 6, -2, 7]].forEach(([x, y, z, d]) => { const l = new THREE.PointLight(0xffc68c, 0, d * VS, 2); l.position.set(x, y, z); villa.add(l); glowLights.push(l); });
-})();
-const poolLight = new THREE.PointLight(0x53d4f0, 0, 6 * VS, 2); poolLight.position.set(3.5, -.2, 5.8); villa.add(poolLight);
-
-/* outdoor furniture */
-(function furniture(){
-  for (let i = 0; i < 3; i++){ const x = -7.8 + i * 1.9;
-    BX(x, x + .75, P0 + .22, P0 + .3, 4.9, 6.9, VMat.wood);
-    [[.04, 4.95], [.65, 4.95], [.04, 6.8], [.65, 6.8]].forEach(([a, z]) => BX(x + a, x + a + .06, P0 + .04, P0 + .22, z, z + .06, VMat.wood));
-    BX(x + .05, x + .7, P0 + .3, P0 + .41, 4.95, 6.3, VMat.cushion);
-    const back = BX(x + .05, x + .7, 0, .1, 0, .75, VMat.cushion); back.position.set(x + .375, P0 + .62, 6.6); back.rotation.x = -.95;
-  }
-  [[-6.87, 5.6], [-4.97, 5.6]].forEach(([x, z]) => { const t = new THREE.Mesh(new THREE.CylinderGeometry(.24, .24, .03, 24), VMat.wood); t.position.set(x, P0 + .46, z); t.castShadow = true; villa.add(t); BX(x - .02, x + .02, P0 + .04, P0 + .45, z - .02, z + .02, VMat.frame); });
-  const pole = BX(-.03, .03, 0, 2.6, -.03, .03, VMat.steel); pole.position.set(-2.4, P0 + 1.3, 5.2);
-  const um = new THREE.Mesh(new THREE.ConeGeometry(1.6, .5, 8, 1, true), new THREE.MeshStandardMaterial({ color: 0xf1ebe1, roughness: .95, side: THREE.DoubleSide }));
-  um.position.set(-2.4, P0 + 2.5, 5.2); um.castShadow = true; villa.add(um);
-})();
-
-/* planting: palms, shrubs, hedges */
-const frondTex = canvasTex(256, 1024, (x, w, h) => {
-  x.clearRect(0, 0, w, h); x.lineCap = 'round';
-  for (let j = 16; j < h - 10; j += 6){ const t = j / h, len = (w / 2 - 6) * Math.pow(Math.sin(Math.PI * Math.min(1, t * 1.06 + .04)), .7) * rnd(.82, 1);
-    x.lineWidth = rnd(3.2, 4.6);
-    x.strokeStyle = `hsl(${rnd(86, 108)},${rnd(40, 58)}%,${rnd(15, 27)}%)`; x.beginPath(); x.moveTo(w / 2, j); x.lineTo(w / 2 - len, j + rnd(22, 40)); x.stroke();
-    x.strokeStyle = `hsl(${rnd(86, 108)},${rnd(40, 58)}%,${rnd(15, 27)}%)`; x.beginPath(); x.moveTo(w / 2, j); x.lineTo(w / 2 + len, j + rnd(22, 40)); x.stroke(); }
-  x.strokeStyle = '#7b7a45'; x.lineWidth = 5; x.beginPath(); x.moveTo(w / 2, 0); x.lineTo(w / 2, h); x.stroke();
-});
-const frondM = new THREE.MeshStandardMaterial({ map: frondTex, color: 0x7d9468, alphaTest: .4, side: THREE.DoubleSide, roughness: .9, envMapIntensity: .32 });
-const frondDepth = new THREE.MeshDepthMaterial({ depthPacking: THREE.RGBADepthPacking, map: frondTex, alphaTest: .4 });
-const trunkM = pbr('bark', 1, { color: 0xb5a48e, roughness: 1, normalScale: new THREE.Vector2(1.6, 1.6) });
-function frondGeo(L, droop){
-  const g = new THREE.PlaneGeometry(1.5, L, 4, 14); g.rotateX(-Math.PI / 2); g.translate(0, 0, L / 2);
-  const p = g.attributes.position;
-  for (let i = 0; i < p.count; i++){ const t = p.getZ(i) / L, x = p.getX(i); p.setY(i, (1.2 * t - droop * t * t) - Math.abs(x) * (.25 + t * .5)); p.setX(i, x * (1 - t * .45)); }
-  g.computeVertexNormals(); return g;
-}
-const frondGeos = [frondGeo(3.6, 1.5), frondGeo(3.5, 2.6), frondGeo(3.2, 3.8)];
-function palm(H, lean){
-  const g = new THREE.Group(), top = new THREE.Vector3(lean, H, lean * .3);
-  const tg = new THREE.CylinderGeometry(.15, .27, H, 14, 24, true), p = tg.attributes.position, uv = tg.attributes.uv;
-  for (let i = 0; i < p.count; i++){ const t = p.getY(i) / H + .5, b = 1 + Math.exp(-t * 14) * .5 + (t > .93 ? (t - .93) * 5 : 0); p.setXYZ(i, p.getX(i) * b + lean * t * t, p.getY(i) + H / 2, p.getZ(i) * b + lean * .3 * t * t); uv.setXY(i, uv.getX(i) * 2, uv.getY(i) * H / 1.4); }
-  tg.computeVertexNormals();
-  const tr = new THREE.Mesh(tg, trunkM); tr.castShadow = tr.receiveShadow = true; g.add(tr);
-  const N = 26;
-  for (let i = 0; i < N; i++){
-    const ring = i % 3, f = new THREE.Mesh(frondGeos[ring], frondM); f.customDepthMaterial = frondDepth; f.castShadow = true; noDepth(f);
-    f.position.copy(top); f.position.y += .1 - ring * .12; f.rotation.order = 'YXZ'; f.rotation.y = i / N * Math.PI * 2 + rnd(-.2, .2); f.rotation.x = -.55 + ring * .42 + rnd(-.1, .1); f.rotation.z = rnd(-.25, .25); f.scale.setScalar(rnd(.85, 1.15)); g.add(f);
-  }
-  const crown = new THREE.Mesh(new THREE.SphereGeometry(.3, 12, 10), trunkM); crown.position.copy(top); crown.scale.y = 1.3; crown.castShadow = true; g.add(crown);
-  return g;
-}
-[[-10.8, 6.5, 8.5, 1.1], [-10.6, -4, 7.4, -.8], [10.4, -6.2, 8.2, .7], [11.2, 10.6, 6.6, -.6],
- [-18, -15, 9, .8], [-6, -17, 10, -.5], [5, -15.5, 8.6, .9], [15.5, -14, 9.6, -.7], [21, -3, 8, .6], [-21, 3, 9.2, -.9], [-24, -12, 8, .4], [26, -16, 9, -.4]]
-  .forEach(([x, z, h, l]) => { const p = palm(h, l); p.position.set(x, 0, z); p.rotation.y = rnd(6.28); villa.add(p); });
-hedge(-13.9, 13.9, 1.7, -10.9, -10.1);
-hedge(-13.9, -13.2, 1.5, -10.1, 2.5); hedge(13.2, 13.9, 1.5, -10.1, 8.5);
-hedge(-8.9, -1.4, .5, 7.75, 8.3, [1.05, 1.1, .8]);
-[[-11.6, -7.5, .95], [11.4, -1.5, 1], [-12, 9.6, 1.1], [11.7, 6.2, .9], [-10.4, 1.2, .8], [6.3, 10.6, .75], [9.9, 11.3, 1.05], [-9.9, 11.9, .7], [-1.2, 10.9, .6], [12.3, 2.6, .7]]
-  .forEach(([x, z, r]) => { const s = shrub(r, rnd(.7, .95), [rnd(.85, 1.1), rnd(.95, 1.1), rnd(.7, .9)]); s.position.set(x, r * .55, z); villa.add(s); });
-// dune scrub beyond the walls so the horizon is not bare
-for (let i = 0; i < 46; i++){ const a = rnd(Math.PI * .98, Math.PI * 2.02), d = rnd(22, 95), r = rnd(.9, 2.6); const s = shrub(r, rnd(.5, .8), [rnd(.75, 1), rnd(.85, 1), rnd(.6, .8)]); s.position.set(Math.cos(a) * d * 1.3, r * .3, Math.sin(a) * d - 6); if (s.position.z < 16) villa.add(s); }
-
-/* hotspots */
-const spots = [
-  { p: [3.5, .6, 5.8], t: 'Infinity pool', m: '9 × 3.6 m', d: 'Mosaic-lined pool set into the travertine terrace, with underwater lighting for the evenings.' },
-  { p: [-4.8, 4.9, 1.5], t: 'First-floor terrace', m: '42 m²', d: 'Open terrace above the reception with a frameless glass balustrade overlooking the pool.' },
-  { p: [2, 5.8, 1.7], t: 'Master suite', m: '68 m²', d: 'Bedroom behind a full-width ribbon window screened by timber louvres.' },
-  { p: [-2.5, 2.1, 1.9], t: 'Reception', m: '120 m²', d: 'Floor-to-ceiling sliding glass that opens the living and dining space onto the deck.' },
-  { p: [-9.5, .4, 8], t: 'Garden', m: '550 m²', d: 'Palms and lawn around the plot, with stepping stones straight down to the beach.' }
+/* ---------- villa explorer replaced by a reels carousel: three portrait reels on a slow turning ring; when one ends the ring turns the next one to the front and its description writes itself in beside it ---------- */
+(function(){
+const REELS = [
+  { src: 'assets/reels/r1.mp4', poster: 'assets/reels/r1.jpg', tag: 'Mazarin Villas · New Alamein', type: 'Resale',
+    title: 'Standalone Resale Villas for Sale in Mazarin Villas – New Alamein',
+    lines: ['Areas starting from <b>605 sqm</b>', 'Prices starting from <b>EGP 38 Million</b>', 'Exclusive villas in a prime coastal location.'], list: true,
+    ask: 'Interested in the standalone resale villas in Mazarin Villas, New Alamein' },
+  { src: 'assets/reels/r2.mp4', poster: 'assets/reels/r2.jpg', tag: 'Latin District · New Alamein', type: 'New launches',
+    title: 'Book your apartment in the Latin District of New Alamein for less than EGP 4 million!',
+    lines: ['Fully finished units with areas starting from <b>108 sqm</b>, flexible payment plans up to <b>9 years</b>, and delivery scheduled for <b>December 2026</b>.',
+            'Choose from units featuring spacious terraces or ground-floor apartments with private gardens, all in a prime location ideal for both living and investment.'],
+    ask: 'Interested in an apartment in the Latin District, New Alamein' },
+  { src: 'assets/reels/r3.mp4', poster: 'assets/reels/r3.jpg', tag: 'Jezzine · Alex West', type: 'New launches',
+    title: 'Jezzine, Alex West… where refined living meets peace of mind and greater privacy.',
+    lines: ['Own your unit in Jezzine and take advantage of this exclusive buying opportunity:', '<b class="hl">Directly from the developer — No commission.</b>'],
+    ask: 'Interested in a unit in Jezzine, Alex West' }
 ];
-spots.forEach((s, i) => {
-  const b = document.createElement('button'); b.className = 'spot'; b.type = 'button'; b.textContent = i + 1; b.setAttribute('aria-label', s.t); b.setAttribute('aria-pressed', 'false');
-  b.addEventListener('click', () => {
-    $$('.spot', vStage).forEach(x => x.setAttribute('aria-pressed', x === b));
-    const info = $('#spotInfo'); info.innerHTML = `<span class="meta">${s.m}</span><h3>${s.t}</h3><p>${s.d}</p>`;
-    if (hasG && !reduce) gsap.from(info.children, { y: 14, opacity: 0, duration: .5, stagger: .06, ease: 'power3.out' });
-  });
-  vStage.appendChild(b); s.el = b; s.v = new THREE.Vector3(...s.p);
+const N = REELS.length, STEP = Math.PI * 2 / N;
+const stage = $('#reelStage'), ring = $('#reelRing'), bars = $('#reelBars'), info = $('#reelInfo'), soundBtn = $('#reelSound');
+if (!stage) return;
+
+const cards = REELS.map((r, i) => {
+  const f = document.createElement('figure'); f.className = 'reel'; f.dataset.i = i;
+  f.innerHTML = `<video muted playsinline preload="${i ? 'metadata' : 'auto'}" poster="${r.poster}" src="${r.src}" aria-label="${r.tag} reel"></video><span class="reel-tag">${r.tag}</span><span class="reel-shade"></span>`;
+  ring.appendChild(f); return f;
 });
+const vids = cards.map(c => c.querySelector('video'));
+bars.innerHTML = REELS.map((r, i) => `<button type="button" aria-label="Play reel ${i + 1}: ${r.tag}"><i></i></button>`).join('');
+const barEls = [...bars.children].map(b => b.firstElementChild);
 
-/* orbit */
-const O0 = { yaw: .5, pitch: .17 };
-const orbit = { yaw: O0.yaw, pitch: O0.pitch, ty: O0.yaw, tp: O0.pitch, drag: false, lx: 0, ly: 0, idle: 0 };
-const cv = V.r.domElement;
-cv.addEventListener('pointerdown', e => { orbit.drag = true; orbit.lx = e.clientX; orbit.ly = e.clientY; cv.setPointerCapture(e.pointerId); });
-cv.addEventListener('pointermove', e => { if (!orbit.drag) return; orbit.ty -= (e.clientX - orbit.lx) * .008; orbit.tp = Math.max(.05, Math.min(1.1, orbit.tp + (e.clientY - orbit.ly) * .005)); orbit.lx = e.clientX; orbit.ly = e.clientY; orbit.idle = 0; });
-['pointerup','pointercancel'].forEach(ev => cv.addEventListener(ev, () => orbit.drag = false));
-$('#resetView').addEventListener('click', () => { orbit.ty = O0.yaw + Math.round((orbit.ty - O0.yaw) / (Math.PI * 2)) * Math.PI * 2; orbit.tp = O0.pitch; });
+let active = 0, rot = 0, muted = true, visible = false, turning = false;
+const st = { rot: 0 };
 
-/* skies: a photographed sky dome you can see, and the matching HDRI for light and reflections.
-   Both are turned so the sun in the picture sits where the scene's sun light comes from. */
-const SRC_AZ = 36;                                   // where the sun sits in the Poly Haven panoramas (degrees)
-const sunDir = (az, el) => { const a = az * Math.PI / 180, e = el * Math.PI / 180; return [Math.cos(a) * Math.cos(e) * 20, Math.sin(e) * 20, Math.sin(a) * Math.cos(e) * 20]; };
-const modes = {
-  day:    { az: 122, el: 46, sun: 0xfff1de, si: 3.8, fill: .3,  env: 1,   dome: 1.5,  tint: 0xffffff, inside: 0,   led: 0,   pool: 0,   exp: 1,    ao: 1 },
-  sunset: { az: 152, el: 14, sun: 0xff8748, si: 2.5, fill: .14, env: .8, dome: 1.05, tint: 0xffffff, inside: .7,  led: 1.4, pool: .6,  exp: .82, ao: .9 },
-  night:  { az: 250, el: 50, sun: 0x7f9ccf, si: .55, fill: .04, env: .1,  dome: .34,  tint: 0x8fa6e6, sky: 'day', inside: 1.25, led: 3, pool: 1.6, exp: 1,  ao: .55 }
-};
-Object.values(modes).forEach(m => { m.sp = sunDir(m.az, m.el); m.roll = ((m.az - SRC_AZ) / 360 % 1 + 1) % 1; });
-const domeGeo = new THREE.SphereGeometry(1, 48, 24);
-const mkDome = r => { const d = new THREE.Mesh(domeGeo, new THREE.MeshBasicMaterial({ side: THREE.BackSide, fog: false, depthWrite: false, transparent: true, opacity: 0 })); d.scale.setScalar(r); d.renderOrder = -10; d.frustumCulled = false; d.visible = false; V.scene.add(noDepth(d)); return d; };
-let domeA = mkDome(400), domeB = mkDome(390);
-const domes = {}, skies = {}, pm = new THREE.PMREMGenerator(V.r);
-function loadDome(k){
-  return domes[k] || (domes[k] = new Promise(res => new THREE.TextureLoader().load(`assets/villa/sky_${k}.jpg`, t => {
-    t.encoding = THREE.sRGBEncoding; t.wrapS = THREE.RepeatWrapping; t.repeat.x = -1; t.offset.x = 1 - modes[k].roll; t.anisotropy = aniso;
-    const c = document.createElement('canvas'); c.width = 64; c.height = 32; const x = c.getContext('2d'); x.drawImage(t.image, 0, 0, 64, 32);
-    const d = x.getImageData(0, 14, 64, 1).data; let r = 0, g = 0, b = 0; for (let i = 0; i < 64; i++){ r += d[i * 4]; g += d[i * 4 + 1]; b += d[i * 4 + 2]; }
-    res({ tex: t, hor: new THREE.Color(r / 64 / 255, g / 64 / 255, b / 64 / 255).convertSRGBToLinear() });
-  }, undefined, () => res(null))));
-}
-function loadSky(k){
-  if (skies[k]) return skies[k];
-  return skies[k] = new Promise(res => {
-    if (!THREE.RGBELoader) return res(null);
-    new THREE.RGBELoader().setDataType(THREE.UnsignedByteType).load(`assets/villa/${k}.hdr`, t => {
-      const im = t.image, w = im.width, d = im.data, sh = Math.round(modes[k].roll * w) * 4, row = new Uint8Array(w * 4);   // turn the panorama
-      if (sh) for (let y = 0; y < im.height; y++){ const o = y * w * 4; row.set(d.subarray(o, o + w * 4)); d.set(row.subarray(w * 4 - sh), o); d.set(row.subarray(0, w * 4 - sh), o + sh); }
-      t.needsUpdate = true; const e = pm.fromEquirectangular(t).texture; t.dispose(); res(e);
-    }, undefined, () => res(null));
+function layout(){
+  const w = stage.clientWidth, h = stage.clientHeight;
+  const cw = Math.min(280, w * (w < 560 ? .6 : .5), (h - 70) * .5625), R = cw * 1.02;
+  stage.style.setProperty('--cw', cw + 'px');
+  cards.forEach((c, i) => {
+    let a = (i - st.rot) * STEP; a = Math.atan2(Math.sin(a), Math.cos(a));
+    const s = Math.sin(a), k = (Math.cos(a) + 1) / 2;               // k: 1 front, 0 back
+    const x = s * R * 1.05, z = (Math.cos(a) - 1) * R * .95;
+    c.style.transform = `translate(-50%,-50%) translate3d(${x.toFixed(1)}px,0,${z.toFixed(1)}px) rotateY(${(-s * 26).toFixed(2)}deg)`;
+    c.style.zIndex = Math.round(k * 100);
+    c.style.setProperty('--k', k.toFixed(3));
   });
 }
 
-/* light modes */
-let curMode = 'day';
-const envMats = []; villa.traverse(o => { if (o.material && !envMats.includes(o.material)){ o.material.userData.env0 = o.material.envMapIntensity; envMats.push(o.material); } });
-function setMode(k){
-  curMode = k; const m = modes[k]; vStage.classList.remove('sunset','night'); if (k !== 'day') vStage.classList.add(k);
-  $$('.modes button').forEach(b => b.setAttribute('aria-pressed', b.dataset.mode === k));
-  const dur = hasG && !reduce ? 1.2 : 0, tw = (o, v) => hasG ? gsap.to(o, { ...v, duration: dur, ease: 'power2.inOut' }) : Object.assign(o, v);
-  const col = (h, s = 1) => { const c = new THREE.Color(h); return { r: c.r * s, g: c.g * s, b: c.b * s }; };
-  loadSky(m.sky || k).then(e => { if (e && curMode === k) V.scene.environment = e; });
-  loadDome(k).then(s => { if (!s || curMode !== k) return;
-    const tint = col(m.tint, m.dome); domeB.material.map = s.tex; domeB.material.color.setRGB(tint.r, tint.g, tint.b); domeB.material.needsUpdate = true; domeB.material.opacity = 0; domeB.visible = true;
-    const done = () => { if (curMode !== k) return; const t = domeA; domeA = domeB; domeB = t; domeA.scale.setScalar(400); domeB.scale.setScalar(390); domeA.renderOrder = -10; domeB.renderOrder = -9; domeB.visible = false; };
-    domeB.renderOrder = -9; if (hasG && dur) gsap.to(domeB.material, { opacity: 1, duration: dur, ease: 'power2.inOut', onComplete: done }); else { domeB.material.opacity = 1; done(); }
-    tw(V.scene.fog.color, { r: s.hor.r * tint.r, g: s.hor.g * tint.g, b: s.hor.b * tint.b });
-  });
-  tw(vSun.color, col(m.sun)); tw(vSun, { intensity: m.si }); tw(vSun.position, { x: m.sp[0], y: m.sp[1], z: m.sp[2] });
-  tw(vFill, { intensity: m.fill }); tw(AOS, { strength: m.ao });
-  envMats.forEach(x => tw(x, { envMapIntensity: x.userData.env0 * m.env }));
-  tw(VMat.inWall, { emissiveIntensity: m.inside * .35 }); tw(VMat.lamp, { emissiveIntensity: .15 + m.inside * 2 }); tw(VMat.curtain, { emissiveIntensity: m.inside * .3 });
-  tw(VMat.led, { emissiveIntensity: m.led }); tw(VMat.liner, { emissiveIntensity: m.pool * .55 });
-  glowLights.forEach(l => tw(l, { intensity: m.inside * 6 })); tw(poolLight, { intensity: m.pool * 4 });
-  tw(V.r, { toneMappingExposure: m.exp });
-  shadowDirty = 240;
+function writeInfo(i, first){
+  const r = REELS[i];
+  const html = `<span class="meta"><span class="n">${String(i + 1).padStart(2, '0')} / ${String(N).padStart(2, '0')}</span> ${r.tag}</span>
+    <h3>${r.title}</h3>
+    ${r.list ? `<ul>${r.lines.map(l => `<li>${l}</li>`).join('')}</ul>` : r.lines.map(l => `<p>${l}</p>`).join('')}`;
+  const put = () => {
+    info.innerHTML = html;
+    if (hasG && !reduce){
+      const parts = info.querySelectorAll('.meta, h3, li, p');
+      gsap.fromTo(parts, { opacity: 0, y: 18, filter: 'blur(6px)' }, { opacity: 1, y: 0, filter: 'blur(0px)', duration: .9, stagger: .12, ease: 'power3.out', clearProps: 'filter' });
+    }
+  };
+  if (first || !hasG || reduce || !info.children.length) return put();
+  gsap.to(info.children, { opacity: 0, y: -12, duration: .35, stagger: .04, ease: 'power2.in', onComplete: put });
 }
-$$('.modes button').forEach(b => b.addEventListener('click', () => setMode(b.dataset.mode)));
 
-/* ambient occlusion: a depth pre-pass and a half-resolution AO pass, multiplied over the finished frame,
-   so corners, eaves and the feet of furniture pick up soft contact shadows */
-const AO = (() => {
-  try {
-    if (!V.r.capabilities.isWebGL2) return null;
-    const dRT = new THREE.WebGLRenderTarget(4, 4, { minFilter: THREE.NearestFilter, magFilter: THREE.NearestFilter });
-    dRT.depthTexture = new THREE.DepthTexture(4, 4, THREE.UnsignedIntType);
-    const aRT = new THREE.WebGLRenderTarget(4, 4, { minFilter: THREE.LinearFilter, magFilter: THREE.LinearFilter, depthBuffer: false });
-    const depthMat = new THREE.MeshBasicMaterial({ colorWrite: false });
-    const vs = 'varying vec2 vUv; void main(){ vUv = uv; gl_Position = vec4(position.xy, 0., 1.); }';
-    const aoMat = new THREE.ShaderMaterial({ depthTest: false, depthWrite: false, extensions: { derivatives: true },
-      uniforms: { tD: { value: dRT.depthTexture }, pInv: { value: new THREE.Matrix4() }, pScale: { value: new THREE.Vector2() }, R: { value: .42 }, strength: { value: 1 } },
-      vertexShader: vs, fragmentShader: `
-        uniform sampler2D tD; uniform mat4 pInv; uniform vec2 pScale; uniform float R, strength; varying vec2 vUv;
-        vec3 vp(vec2 uv){ float d = texture2D(tD, uv).x; vec4 v = pInv * vec4(uv * 2. - 1., d * 2. - 1., 1.); return v.xyz / v.w; }
-        void main(){
-          if (texture2D(tD, vUv).x >= .99995){ gl_FragColor = vec4(1.); return; }
-          vec3 p = vp(vUv), n = normalize(cross(dFdx(p), dFdy(p)));
-          float rot = fract(52.9829189 * fract(dot(gl_FragCoord.xy, vec2(.06711056, .00583715)))) * 6.2832;
-          vec2 rUv = R * pScale * .5 / -p.z; float occ = 0.;
-          for (int i = 0; i < 12; i++){
-            float fi = float(i), a = fi * 2.39996 + rot, r = sqrt((fi + .5) / 12.);
-            vec3 v = vp(vUv + vec2(cos(a), sin(a)) * r * rUv) - p; float d2 = dot(v, v);
-            occ += max(0., dot(v, n) / sqrt(d2 + 1e-5) - .14) * max(0., 1. - d2 / (R * R));
-          }
-          float ao = clamp(1. - occ / 12. * 2.6 * strength, 0., 1.);
-          gl_FragColor = vec4(vec3(mix(ao, 1., smoothstep(22., 55., -p.z))), 1.);
-        }` });
-    const blurMat = new THREE.ShaderMaterial({ depthTest: false, depthWrite: false, transparent: true, blending: THREE.CustomBlending, blendSrc: THREE.DstColorFactor, blendDst: THREE.ZeroFactor,
-      uniforms: { tA: { value: aRT.texture }, px: { value: new THREE.Vector2() } },
-      vertexShader: vs, fragmentShader: `
-        uniform sampler2D tA; uniform vec2 px; varying vec2 vUv;
-        void main(){ float a = 0.; for (int i = 0; i < 4; i++) for (int j = 0; j < 4; j++) a += texture2D(tA, vUv + (vec2(float(i), float(j)) - 1.5) * px).r; a /= 16.; gl_FragColor = vec4(vec3(a), 1.); }` });
-    const cam = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1), geo = new THREE.PlaneGeometry(2, 2);
-    const q1 = new THREE.Mesh(geo, aoMat), q2 = new THREE.Mesh(geo, blurMat); q1.frustumCulled = q2.frustumCulled = false;
-    const s1 = new THREE.Scene(), s2 = new THREE.Scene(); s1.add(q1); s2.add(q2);
-    return {
-      resize(){ dRT.setSize(AOS.w, AOS.h); aRT.setSize(AOS.w, AOS.h); blurMat.uniforms.px.value.set(1 / AOS.w, 1 / AOS.h); },
-      render(){
-        const r = V.r, fog = V.scene.fog, envm = V.scene.environment;
-        V.cam.layers.set(0); V.scene.overrideMaterial = depthMat; V.scene.fog = null;
-        r.setRenderTarget(dRT); r.render(V.scene, V.cam);
-        V.scene.overrideMaterial = null; V.scene.fog = fog; V.scene.environment = envm; V.cam.layers.enable(1);
-        aoMat.uniforms.pInv.value.copy(V.cam.projectionMatrixInverse); aoMat.uniforms.pScale.value.set(V.cam.projectionMatrix.elements[0], V.cam.projectionMatrix.elements[5]); aoMat.uniforms.strength.value = AOS.strength;
-        r.setRenderTarget(aRT); r.render(s1, cam);
-        r.setRenderTarget(null); r.autoClear = false; r.render(s2, cam); r.autoClear = true;
-      }
-    };
-  } catch (e) { return null; }
+function playActive(){
+  vids.forEach((v, i) => { if (i !== active) v.pause(); });
+  const v = vids[active];
+  v.muted = muted;
+  if (visible){ const p = v.play(); if (p && p.catch) p.catch(() => { v.muted = muted = true; syncSound(); v.play().catch(() => {}); }); }
+}
+
+function go(i){
+  i = ((i % N) + N) % N;
+  if (i === active && rot) return;
+  // always turn the same way, the shortest step forward or back
+  let d = i - active; if (d > N / 2) d -= N; if (d < -N / 2) d += N;
+  if (!d) d = 0;
+  rot += d; vids[active].pause();
+  const prev = active; active = i;
+  cards.forEach((c, k) => c.classList.toggle('on', k === active));
+  barEls.forEach((b, k) => { if (k !== active) b.style.transform = 'scaleX(0)'; });
+  writeInfo(active);
+  $('#tourBook').dataset.i = active;
+  const done = () => { turning = false; if (prev !== active) vids[prev].currentTime = 0; vids[active].currentTime = 0; playActive(); };
+  turning = true;
+  if (hasG && !reduce) gsap.to(st, { rot, duration: 1.6, ease: 'power3.inOut', onUpdate: layout, onComplete: done });
+  else { st.rot = rot; layout(); done(); }
+}
+
+vids.forEach((v, i) => {
+  v.addEventListener('ended', () => { if (i === active) go(active + 1); });
+  v.addEventListener('timeupdate', () => { if (i === active && v.duration) barEls[i].style.transform = `scaleX(${(v.currentTime / v.duration).toFixed(4)})`; });
+});
+cards.forEach((c, i) => c.addEventListener('click', () => { if (i !== active) go(i); else { const v = vids[i]; v.paused ? playActive() : v.pause(); } }));
+[...bars.children].forEach((b, i) => b.addEventListener('click', () => go(i)));
+$('#reelPrev').addEventListener('click', () => go(active - 1));
+$('#reelNext').addEventListener('click', () => go(active + 1));
+
+function syncSound(){
+  soundBtn.setAttribute('aria-pressed', String(!muted));
+  soundBtn.setAttribute('aria-label', muted ? 'Turn sound on' : 'Turn sound off');
+  soundBtn.classList.toggle('on', !muted);
+}
+soundBtn.addEventListener('click', () => { muted = !muted; vids.forEach(v => v.muted = muted); syncSound(); if (visible) playActive(); });
+syncSound();
+
+// swipe on touch screens
+let sx = null;
+stage.addEventListener('touchstart', e => sx = e.touches[0].clientX, { passive: true });
+stage.addEventListener('touchend', e => { if (sx == null) return; const dx = e.changedTouches[0].clientX - sx; sx = null; if (Math.abs(dx) > 45) go(active + (dx < 0 ? 1 : -1)); });
+stage.addEventListener('keydown', e => { if (e.key === 'ArrowRight') go(active + 1); if (e.key === 'ArrowLeft') go(active - 1); });
+
+$('#tourBook').addEventListener('click', () => { const r = REELS[active]; $('#fType').value = r.type; $('#fMsg').value = r.ask; });
+
+new IntersectionObserver(es => es.forEach(e => {
+  visible = e.isIntersecting;
+  if (visible){ vids.forEach(v => { if (v.preload !== 'auto') v.preload = 'auto'; }); if (!turning) playActive(); }
+  else vids.forEach(v => v.pause());
+}), { threshold: .35 }).observe(stage);
+
+addEventListener('resize', layout);
+cards[0].classList.add('on');
+layout(); writeInfo(0, true);
 })();
-new ResizeObserver(sizeVilla).observe(vStage); sizeVilla();
-
-let villaVisible = false, villaReady = false;
-new IntersectionObserver(([e]) => {
-  villaVisible = e.isIntersecting;
-  if (villaVisible && !villaReady){ villaReady = true; setMode('day'); loadSky('sunset'); loadDome('sunset'); }
-}, { rootMargin: '600px' }).observe(vStage);
-const vClock = new THREE.Clock(), tmp = new THREE.Vector3();
-(function villaTick(){
-  requestAnimationFrame(villaTick);
-  const dt = Math.min(.1, vClock.getDelta());
-  if (!villaVisible) return;
-  orbit.idle += dt;
-  if (!orbit.drag && orbit.idle > 3 && !reduce) orbit.ty += dt * .08;
-  orbit.yaw += (orbit.ty - orbit.yaw) * .08; orbit.pitch += (orbit.tp - orbit.pitch) * .08;
-  const c = Math.cos(orbit.pitch);
-  V.cam.position.set(Math.sin(orbit.yaw) * c * vDist, Math.sin(orbit.pitch) * vDist + .5, Math.cos(orbit.yaw) * c * vDist);
-  V.cam.lookAt(0, 1.75, .4);
-  domeA.position.copy(V.cam.position); domeB.position.copy(V.cam.position); domeA.visible = domeA.material.opacity > 0 && !!domeA.material.map;
-  if (!reduce){ VMat.water.normalMap.offset.x += dt * .02; VMat.water.normalMap.offset.y += dt * .013; seaRipple.offset.x += dt * .05; seaRipple.offset.y -= dt * .09; }
-  const w = vStage.clientWidth, h = vStage.clientHeight;
-  spots.forEach(s => { tmp.copy(s.v).applyMatrix4(villa.matrixWorld).project(V.cam); s.el.style.transform = `translate(${(tmp.x * .5 + .5) * w}px,${(-tmp.y * .5 + .5) * h}px)`; s.el.style.opacity = tmp.z < 1 ? 1 : 0; });
-  const deg = Math.round(((orbit.yaw * 180 / Math.PI) % 360 + 360) % 360);
-  $('#compass').textContent = 'N ' + deg + '°';
-  if (shadowDirty > 0){ shadowDirty--; V.r.shadowMap.needsUpdate = true; }
-  V.r.render(V.scene, V.cam);
-  if (AO && AOS.strength > .02) AO.render();
-})();
-
 })();
 </script>
 </body>
